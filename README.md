@@ -2,12 +2,12 @@
 
 function minimax(board,maximizingPlayer)
 1. Check for terminal states and accordingly return a value
-  a. If it is the winning move and maximizing player’s turn
-    i. Then return score positive.
-  b. Else if it is the winning move and minimizing player’s turn
-    i. Then return score negative.
-  c. Else if no one is winning and no empty spots are left
-    i. Then return score zero.
+  1. If it is the winning move and maximizing player’s turn
+    1. Then return score positive.
+  1. Else if it is the winning move and minimizing player’s turn
+    1. Then return score negative.
+  1. Else if no one is winning and no empty spots are left
+    1. Then return score zero.
 2. Go through the available spots on the board
   a. Call the minimax function at each available spot.
   b. Store the score at each position.
