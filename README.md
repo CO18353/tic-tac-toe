@@ -9,10 +9,10 @@ function minimax(board,maximizingPlayer)
    1. Else if no one is winning and no empty spots are left
       1. Then return score zero.
 2. Go through the available spots on the board
-   2. Call the minimax function at each available spot.
-   2. Store the score at each position.
+   1. Call the minimax function at each available spot.
+   1. Store the score at each position.
 3. Reset the board
 4. Evaluate the returning values from the function calls.
-   4. Choose the highest score when maximizingPlayer is playing.
-   4. Else choose the lowest score.
+   1. Choose the highest score when maximizingPlayer is playing.
+   1. Else choose the lowest score.
 5. Return the best value
