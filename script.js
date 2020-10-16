@@ -1,4 +1,4 @@
-let origBoard; //Array that keeps track of the symbol in each cell
+let origBoard; //Main tic tac toe board- 1D array that keeps track of the symbol in each cell
 let huPlayer = 'O'; //By default symbol of Human Player
 let aiPlayer = 'X'; //By default symbol of Oponent Computer Player
 //Array defining all the winning combinations (i.e 3 horizontal rows, 3 vertical columns and 2 diagonals)
@@ -12,8 +12,8 @@ const winCombos = [
 	[0, 4, 8],
 	[2, 4, 6]
 ];
-//Stores Reference to each cell of the board, the td elements with a class "cell"
-const cells = document.querySelectorAll('.cell');
+//Stores reference to each cell of the board, the td elements
+const cells = document.querySelectorAll('td');
 //Call to the startGame function whenever the window is loaded or the replay button is pressed
 startGame();
 
@@ -54,8 +54,8 @@ function turnClick(square) {
 			turn(square.target.id, huPlayer);
 		//Then only if the game is not ending, the AI will get its turn
 		if (!checkWin(origBoard, huPlayer) && !checkTie()){
-			//setTimeout(function () { turn(bestSpot(), aiPlayer); }, 500);//To give an illusion that the computer is thinking
-			turn(bestSpot(), aiPlayer);
+			setTimeout(function () { turn(bestSpot(), aiPlayer); }, 200);//To give an illusion that the computer is thinking
+			//turn(bestSpot(), aiPlayer);
 		}
 	}
 }
