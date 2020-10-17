@@ -8,35 +8,39 @@
 
 <body>
 	<!--To divide the area into a 3 by 3 grid-->
-	<table>
-		<tr>
-			<td class="cell" id="0"></td>
-			<td class="cell" id="1"></td>
-			<td class="cell" id="2"></td>
-		</tr>
-		<tr>
-			<td class="cell" id="3"></td>
-			<td class="cell" id="4"></td>
-			<td class="cell" id="5"></td>
-		</tr>
-		<tr>
-			<td class="cell" id="6"></td>
-			<td class="cell" id="7"></td>
-			<td class="cell" id="8"></td>
-		</tr>
-	</table>
-	<!--To display the end result of the game-->
-	<div class="endgame">
-		<div class="text"></div>
-		<button onClick="startGame()">Play Again</button>
+	<div class="ttt">
+		<table>
+			<tr>
+				<td id="0"></td>
+				<td id="1"></td>
+				<td id="2"></td>
+			</tr>
+			<tr>
+				<td id="3"></td>
+				<td id="4"></td>
+				<td id="5"></td>
+			</tr>
+			<tr>
+				<td id="6"></td>
+				<td id="7"></td>
+				<td id="8"></td>
+			</tr>
+		</table>
 	</div>
-	<!--Option to Select either X or O-->
-	<div class="selectSym">
-		<p>Select symbol:</p>
-		<button onClick="selectSym('X')">X</button>
-		<button onClick="selectSym('O')">O</button>
+	<div class="subsection">
+		<!--To display the end result of the game-->
+		<div class="endgame">
+			<div class="text"></div>
+			<!--To reset the game-->
+			<button onClick="startGame()">Play Again</button>
+		</div>
+		<!--Option to Select either X or O-->
+		<div class="selectSym">
+			<p>Select a symbol</p>
+			<button onClick="selectSym('X')">X</button>
+			<button onClick="selectSym('O')">O</button>
+		</div>
 	</div>
-	<!--To reset the game-->
 </body>
 	<script src="script.js"></script>
 </html>
